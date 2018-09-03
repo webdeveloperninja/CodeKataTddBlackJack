@@ -30,8 +30,8 @@ namespace BlackJackCardGame
 
     public class Card
     {
-        public Suit suit { get; set; }
-        public Face face { get; set; }
+        public Suit suit { get; private set; }
+        public Face face { get; private set; }
 
         public Card(Suit cardSuit, Face cardFace)
         {
