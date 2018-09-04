@@ -4,6 +4,13 @@ using System.Text;
 
 namespace BlackJackCardGame
 {
+
+    public enum Move
+    {
+        Hit,
+        Stay
+    }
+
     public abstract class Person
     {
         public string PlayerName { get; private set; }
@@ -22,6 +29,11 @@ namespace BlackJackCardGame
         public int GetHandValue()
         {
             return _hand.GetValue();
+        }
+
+        public virtual Move NextMove()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -6,6 +6,7 @@ namespace BlackJackCardGame
 {
     public class Dealer : Person
     {
+        public readonly int StayThreshold = 11;
         private IDeck _deck;
 
         public Dealer(string name, IDeck deck) : base(name)
@@ -21,6 +22,15 @@ namespace BlackJackCardGame
         public string GetFormattedHand()
         {
             return this._hand.GetFormattedTopCard();
+        }
+
+        public override Move NextMove()
+        {
+            if (GetHandValue() >= StayThreshold)
+            {
+                return Move.Stay;
+            }
+            return Move.Hit;
         }
     }
 }
