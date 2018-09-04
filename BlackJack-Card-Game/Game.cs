@@ -17,6 +17,8 @@ namespace BlackJackCardGame
 
             InitialDeal();
             DisplayHands();
+            Console.WriteLine($"Player hand value: {_player.GetHandValue()}");
+            Console.WriteLine($"Dealer hand value: {_dealer.GetHandValue()}");
             Console.ReadLine();
         }
 

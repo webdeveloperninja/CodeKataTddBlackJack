@@ -18,5 +18,10 @@ namespace BlackJackCardGame
         {
             _hand.AddToHand(card);
         }
+
+        public int GetHandValue()
+        {
+            return _hand.GetValue();
+        }
     }
 }
