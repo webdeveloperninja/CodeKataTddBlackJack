@@ -7,7 +7,7 @@ namespace BlackJackCardGame
     public class Player
     {
         public string PlayerName { get; private set; }
-        public Hand hand { get; private set; } = new Hand();
+        public Hand Hand { get; private set; } = new Hand();
 
         public Player(string name)
         {
@@ -16,7 +16,7 @@ namespace BlackJackCardGame
 
         public void AddCardToHand(Card card)
         {
-            hand.AddToHand(card);
+            Hand.AddToHand(card);
         }
     }
 }
