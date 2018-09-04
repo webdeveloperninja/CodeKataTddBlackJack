@@ -22,5 +22,14 @@ namespace UnitTests
             Assert.Equal(copiedDeck.First(), card);
             Assert.Equal(deck.Cards.Count, --numberOfCards);
         }
+
+        [Fact]
+        public void ShouldInitialize52Cards()
+        {
+            var numberOfCards = 52;
+            var deck = new Deck();
+
+            Assert.Equal(deck.Cards.Count, numberOfCards);
+        }
     }
 }
