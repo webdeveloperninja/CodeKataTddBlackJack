@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BlackJackCardGame
 {
-    public class Deck
+    public class Deck : IDeck
     {
         public Queue<Card> Cards { get; private set; }
 

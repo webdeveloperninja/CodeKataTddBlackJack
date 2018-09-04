@@ -6,26 +6,25 @@ namespace BlackJackCardGame
 {
     public class Game
     {
-        private Deck _deck { get; set; }
         private Player _player { get; set; }
-        private Player _dealer { get; set; }
+        private Dealer _dealer { get; set; }
 
         public Game()
         {
-            _deck = new Deck();
+            var deck = new Deck();
             _player = new Player("Robert");
-            _dealer = new Player("Dealer");
+            _dealer = new Dealer("Dealer", deck);
 
             InitialDeal();
         }
 
         private void InitialDeal()
         {
-            _player.AddCardToHand(_deck.Hit());
-            _dealer.AddCardToHand(_deck.Hit());
+            _player.AddCardToHand(_dealer.Hit());
+            _dealer.AddCardToHand(_dealer.Hit());
 
-            _player.AddCardToHand(_deck.Hit());
-            _dealer.AddCardToHand(_deck.Hit());
+            _player.AddCardToHand(_dealer.Hit());
+            _dealer.AddCardToHand(_dealer.Hit());
         }
     }
 }
