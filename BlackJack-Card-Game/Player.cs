@@ -4,19 +4,14 @@ using System.Text;
 
 namespace BlackJackCardGame
 {
-    public class Player
+    public class Player : Person
     {
-        public string PlayerName { get; private set; }
-        public Hand Hand { get; private set; } = new Hand();
 
-        public Player(string name)
-        {
-            PlayerName = name;
-        }
+        public Player(string name) : base(name) { }
 
-        public void AddCardToHand(Card card)
+        public string GetFormattedHand()
         {
-            Hand.AddToHand(card);
+            return this._hand.Formatted();
         }
     }
 }

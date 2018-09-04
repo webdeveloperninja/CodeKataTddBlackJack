@@ -7,7 +7,7 @@ namespace BlackJackCardGame
 {
     public class Hand
     {
-        public List<Card> Cards { get; private set; } = new List<Card>();
+        private List<Card> Cards = new List<Card>();
 
         public void AddToHand(Card card)
         {
@@ -16,7 +16,17 @@ namespace BlackJackCardGame
 
         public string Formatted()
         {
-            return string.Join(",", Cards.Select(c => $"{c.face} {c.suit}"));
+            return string.Join(",", Cards.Select(GetFormattedCard));
+        }
+
+        public string GetTopCard()
+        {
+            return Cards.Select(GetFormattedCard).FirstOrDefault();
+        }
+
+        private string GetFormattedCard(Card card)
+        {
+            return $"{card.face} {card.suit}";
         }
     }
 }

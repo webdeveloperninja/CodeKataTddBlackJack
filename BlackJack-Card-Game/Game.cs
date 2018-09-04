@@ -25,7 +25,9 @@ namespace BlackJackCardGame
 
             _player.AddCardToHand(_dealer.Hit());
             _dealer.AddCardToHand(_dealer.Hit());
-            Console.WriteLine("Your hand: {0}", _player.Hand.Formatted());
+
+            Console.WriteLine($"Dealer top card { _dealer.GetFormattedHand() }");
+            Console.WriteLine($"Your hand: { _player.GetFormattedHand() }");
             Console.ReadLine();
         }
     }

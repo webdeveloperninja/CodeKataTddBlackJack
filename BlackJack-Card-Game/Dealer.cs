@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlackJackCardGame
 {
-    public class Dealer : Player
+    public class Dealer : Person
     {
         private IDeck _deck;
 
@@ -16,6 +16,11 @@ namespace BlackJackCardGame
         public Card Hit()
         {
             return _deck.Hit();
+        }
+
+        public string GetFormattedHand()
+        {
+            return this._hand.GetTopCard();
         }
     }
 }
