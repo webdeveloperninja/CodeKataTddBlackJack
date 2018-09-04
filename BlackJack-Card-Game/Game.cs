@@ -16,6 +16,8 @@ namespace BlackJackCardGame
             _dealer = new Dealer("Dealer", deck);
 
             InitialDeal();
+            DisplayHands();
+            Console.ReadLine();
         }
 
         private void InitialDeal()
@@ -25,10 +27,12 @@ namespace BlackJackCardGame
 
             _player.AddCardToHand(_dealer.Hit());
             _dealer.AddCardToHand(_dealer.Hit());
+        }
 
+        private void DisplayHands()
+        {
             Console.WriteLine($"Dealer top card { _dealer.GetFormattedHand() }");
             Console.WriteLine($"Your hand: { _player.GetFormattedHand() }");
-            Console.ReadLine();
         }
     }
 }

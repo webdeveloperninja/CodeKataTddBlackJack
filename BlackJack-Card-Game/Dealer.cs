@@ -20,7 +20,7 @@ namespace BlackJackCardGame
 
         public string GetFormattedHand()
         {
-            return this._hand.GetTopCard();
+            return this._hand.GetFormattedTopCard();
         }
     }
 }

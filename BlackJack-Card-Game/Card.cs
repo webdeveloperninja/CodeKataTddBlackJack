@@ -38,5 +38,15 @@ namespace BlackJackCardGame
             suit = cardSuit;
             face = cardFace;
         }
+
+        public bool IsAce()
+        {
+            return face == Face.Ace;
+        }
+
+        public bool IsRoyalCard()
+        {
+            return face == Face.King || face == Face.Queen || face == Face.Jack;
+        }
     }
 }

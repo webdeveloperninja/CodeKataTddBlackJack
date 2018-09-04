@@ -14,12 +14,12 @@ namespace BlackJackCardGame
             Cards.Add(card);
         }
 
-        public string Formatted()
+        public string GetFormattedCards()
         {
             return string.Join(",", Cards.Select(GetFormattedCard));
         }
 
-        public string GetTopCard()
+        public string GetFormattedTopCard()
         {
             return Cards.Select(GetFormattedCard).FirstOrDefault();
         }

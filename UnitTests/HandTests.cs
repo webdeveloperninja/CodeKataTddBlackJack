@@ -16,8 +16,8 @@ namespace UnitTests
 
             sut.AddToHand(card);
 
-            Assert.Contains(card.face.ToString(), sut.Formatted());
-            Assert.DoesNotContain(nonExistantFace, sut.Formatted());
+            Assert.Contains(card.face.ToString(), sut.GetFormattedCards());
+            Assert.DoesNotContain(nonExistantFace, sut.GetFormattedCards());
         }
 
         [Fact]
@@ -29,8 +29,8 @@ namespace UnitTests
 
             sut.AddToHand(card);
 
-            Assert.Contains(card.face.ToString(), sut.Formatted());
-            Assert.DoesNotContain(nonExistantSuit, sut.Formatted());
+            Assert.Contains(card.face.ToString(), sut.GetFormattedCards());
+            Assert.DoesNotContain(nonExistantSuit, sut.GetFormattedCards());
         }
 
         [Fact]
@@ -42,8 +42,8 @@ namespace UnitTests
 
             sut.AddToHand(card);
 
-            Assert.Contains(card.face.ToString(), sut.GetTopCard());
-            Assert.DoesNotContain(nonExistantFace, sut.GetTopCard());
+            Assert.Contains(card.face.ToString(), sut.GetFormattedTopCard());
+            Assert.DoesNotContain(nonExistantFace, sut.GetFormattedTopCard());
         }
 
         [Fact]
@@ -55,8 +55,8 @@ namespace UnitTests
 
             sut.AddToHand(card);
 
-            Assert.Contains(card.face.ToString(), sut.GetTopCard());
-            Assert.DoesNotContain(nonExistantSuit, sut.GetTopCard());
+            Assert.Contains(card.face.ToString(), sut.GetFormattedTopCard());
+            Assert.DoesNotContain(nonExistantSuit, sut.GetFormattedTopCard());
         }
     }
 }
