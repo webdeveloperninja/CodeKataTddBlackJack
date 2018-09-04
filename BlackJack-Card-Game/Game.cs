@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BlackJackCardGame
 {
@@ -17,9 +15,6 @@ namespace BlackJackCardGame
 
             InitialDeal();
             DisplayHands();
-            Console.WriteLine($"Player hand value: {_player.GetHandValue()}");
-            Console.WriteLine($"Dealer hand value: {_dealer.GetHandValue()}");
-            Console.ReadLine();
         }
 
         private void InitialDeal()
@@ -35,6 +30,7 @@ namespace BlackJackCardGame
         {
             Console.WriteLine($"Dealer top card { _dealer.GetFormattedHand() }");
             Console.WriteLine($"Your hand: { _player.GetFormattedHand() }");
+            Console.ReadLine();
         }
     }
 }

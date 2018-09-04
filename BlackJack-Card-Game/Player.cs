@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BlackJackCardGame
+﻿namespace BlackJackCardGame
 {
     public class Player : Person
     {
